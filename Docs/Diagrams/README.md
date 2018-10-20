@@ -83,6 +83,7 @@
 ### 2. Диаграмма активности<a name="2"></a>
   
 ### 3. Диаграмма последовательности<a name="3"></a>
+![Sequence Diagram](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/SequenceDiagram.png?raw=true)
 
 ### 4. Диаграмма состояний<a name="4"></a>
 
