@@ -1,5 +1,5 @@
 # UML Диаграммы
-1. [Диаграмма прецедентов](#1)
+1. [Диаграмма прецедентов](#1)<br>
 1.1 [Актёры](#1.1)<br>
 1.2 [Варианты использования](#1.2)<br>
 1.2.1 [Добавить аудиофайлы](#1.2.1)<br>
@@ -11,6 +11,14 @@
 1.2.7 [Солировать аудиозапись](#1.2.7)<br>
 1.2.8 [Заглушить аудиозапись](#1.2.8)<br>
 2. [Диаграмма активности](#2)<br>
+2.1 [Добавить аудиофайлы в плейлист](#2.1)<br>
+2.2 [Начать воспроизведение аудиозаписей](#2.2)<br>
+2.3 [Постановка на паузу аудиозаписей](#2.3)<br>
+2.4 [Остановить воспроизведение аудиозаписей](#2.4)<br>
+2.5 [Изменить громкость аудиозаписи](#2.5)<br>
+2.6 [Панорамировать аудиозапись](#2.6)<br>
+2.7 [Солировать аудиозапись](#2.7)<br>
+2.8 [Заглушить аудиозапись](#2.8)<br>
 3. [Диаграмма последовательности](#3)<br>
 4. [Диаграмма состояний](#4)<br>
 5. [Диаграмма классов](#5)<br>
@@ -81,7 +89,23 @@
 3. Конец.
 
 ### 2. Диаграмма активности<a name="2"></a>
-  
+#### 2.1 Добавить аудиофайлы в плейлист<a name="2.1"></a>
+![Add](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_add.png?raw=true)
+#### 2.2 Начать воспроизведение аудиозаписей<a name="2.2"></a>
+![Play](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_play.png?raw=true)
+#### 2.3 Постановка на паузу аудиозаписей<a name="2.3"></a>
+![Pause](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_pause.png?raw=true)
+#### 2.4 Остановить воспроизведение аудиозаписей<a name="2.4"></a>
+![Stop](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_stop.png?raw=true)
+#### 2.5 Изменить громкость аудиозаписи<a name="2.5"></a>
+![Volume](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_volume.png?raw=true)
+#### 2.6 Панорамировать аудиозапись<a name="2.6"></a>
+![Pan](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_pan.png?raw=true)
+#### 2.7 Солировать аудиозапись<a name="2.7"></a>
+![Solo](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_solo.png?raw=true)
+#### 2.8 Заглушить аудиозапись<a name="2.8"></a>
+![Mute](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ActivityDiagram/ActivityDiagram_mute.png?raw=true)
+
 ### 3. Диаграмма последовательности<a name="3"></a>
 ![Sequence Diagram](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/SequenceDiagram.png?raw=true)
 
