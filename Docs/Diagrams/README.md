@@ -21,9 +21,9 @@
 2.8 [Заглушить аудиозапись](#2.8)<br>
 3. [Диаграмма последовательности](#3)<br>
 4. [Диаграмма состояний](#4)<br>
+4.1 [Добавить аудиофайлы в плейлист](#4.1)<br>
 5. [Диаграмма классов](#5)<br>
-6. [Диаграмма развёртывания](#6)<br>
-7. [Диаграмма прецедентов](#7)<br><br>
+6. [Диаграмма развёртывания](#6)<br><br>
 
 
 ### Глоссарий
@@ -110,12 +110,12 @@
 ![Sequence Diagram](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/SequenceDiagram.png?raw=true)
 
 ### 4. Диаграмма состояний<a name="4"></a>
+#### 4.1. Добавить аудиофайлы в плейлист<a name="4.1"></a>
+![Add](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_add.png?raw=true)
 
 ### 5. Диаграмма классов<a name="5"></a>
 ![Class Diagram](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ClassDiagram.png?raw=true)
 
-### 6. Диаграмма компонентов<a name="6"></a>
-
-### 7. Диаграмма развертывания<a name="7"></a>
-
+### 6. Диаграмма развертывания и компонентов<a name="6"></a>
+![Component and deployment diagram](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ComponentDiagram.png?raw=true)
 
