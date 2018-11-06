@@ -118,9 +118,9 @@
 
 ### 4. Диаграмма состояний<a name="4"></a>
 #### 4.1. Добавить аудиофайлы в плейлист<a name="4.1"></a>
-![Add](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_add.png?raw=true)
+![Add](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_add_.png?raw=true)
 #### 4.2. Солировать аудиозапись<a name="4.2"></a>
-![Solo](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_solo.png?raw=true)
+![Solo](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_solo_.png?raw=true)
 #### 4.3. Заглушить аудиозапись<a name="4.3"></a>
 ![Mute](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_mute_.png?raw=true)
 
