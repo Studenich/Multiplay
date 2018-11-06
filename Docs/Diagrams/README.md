@@ -122,7 +122,7 @@
 #### 4.2. Солировать аудиозапись<a name="4.2"></a>
 ![Solo](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_solo.png?raw=true)
 #### 4.3. Заглушить аудиозапись<a name="4.3"></a>
-![Mute](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_mute.png?raw=true)
+![Mute](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_mute_.png?raw=true)
 
 ### 5. Диаграмма классов<a name="5"></a>
 ![Class Diagram](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ClassDiagram.png?raw=true)
