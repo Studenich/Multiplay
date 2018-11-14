@@ -12,12 +12,14 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 public class MainWindowController {
 
-    final FileChooser fileChooser = new FileChooser();
-
-    ArrayList<TrackWidgetController> audioTracks;
+    private FileChooser fileChooser;
+    private Stage mainStage;
+    private ArrayList<TrackWidgetController> audioTracks = new ArrayList<TrackWidgetController>();
+    private int count = 0;
 
     @FXML
     private ResourceBundle resources;
@@ -26,45 +28,61 @@ public class MainWindowController {
     private URL location;
 
     @FXML
-    private Button AddButton;
+    private Button addButton;
 
     @FXML
-    private Button PlayButton;
+    private Button playButton;
 
     @FXML
-    private Button PauseButton;
+    private Button pauseButton;
 
     @FXML
-    private Button StopButton;
+    private Button stopButton;
 
     @FXML
     private HBox trackHBox;
 
     @FXML
     void initialize() {
-        AddButton.setOnAction(event -> {
+        fileChooser = new FileChooser();
+
+
+
+
+        addButton.setOnAction(event -> {
             System.out.println("Add button clicked!");
 
-            //List<File> files = fileChooser.showOpenMultipleDialog();
+            List<File> files = fileChooser.showOpenMultipleDialog(mainStage);
+            files.forEach(file -> {
+                System.out.println(file);
 
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/TrackWidget.fxml"));
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("/sample/TrackWidget.fxml"));
+                try {
+                    loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Parent track = loader.getRoot();
+                trackHBox.getChildren().addAll(track);
 
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+                TrackWidgetController trackWidgetController = loader.getController();
+                trackWidgetController.setMainWindow(this);
+                trackWidgetController.initPlayer(file);
+                trackWidgetController.setName(file);
+                audioTracks.add(trackWidgetController);
+            });
 
-            TrackWidgetController trackWidgetController = loader.getController();
-            trackWidgetController.test();
-            /*audioTracks.add(trackWidgetController);
             System.out.println(audioTracks.size());
-            audioTracks.get(0).test();*/
-
-            Parent track = loader.getRoot();
-            trackHBox.getChildren().addAll(track);
         });
 
+    }
+
+    void test() {
+        System.out.println("Main Test");
+    }
+
+    void setMainStage(Stage stage) {
+        this.mainStage = stage;
     }
 }

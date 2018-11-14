@@ -12,10 +12,10 @@
          <children>
             <HBox layoutX="6.0" prefHeight="80.0" prefWidth="594.0" spacing="15.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
                <children>
-                  <Button fx:id="AddButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Add" />
-                  <Button fx:id="PlayButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Play" />
-                  <Button fx:id="PauseButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Pause" />
-                  <Button fx:id="StopButton" layoutX="155.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Stop" />
+                  <Button fx:id="addButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Add" />
+                  <Button fx:id="playButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Play" />
+                  <Button fx:id="pauseButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Pause" />
+                  <Button fx:id="stopButton" layoutX="155.0" layoutY="25.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Stop" />
                </children>
                <padding>
                   <Insets left="15.0" top="15.0" />
@@ -23,6 +23,6 @@
             </HBox>
          </children>
       </AnchorPane>
-      <HBox fx:id="trackHBox" layoutX="15.0" layoutY="94.0" prefHeight="389.0" prefWidth="846.0" style="-fx-border-color: green;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0" />
+      <HBox fx:id="trackHBox" layoutX="15.0" layoutY="94.0" prefHeight="389.0" prefWidth="846.0" spacing="15.0" style="-fx-border-color: green;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0" />
    </children>
 </AnchorPane>

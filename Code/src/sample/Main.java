@@ -8,9 +8,14 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private MainWindowController mainWindowController;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
+        FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
+        Parent root = mainLoader.load();
+        mainWindowController = mainLoader.getController();
+        mainWindowController.setMainStage(primaryStage);
         primaryStage.setTitle("Multiplay");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
