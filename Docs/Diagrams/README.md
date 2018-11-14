@@ -22,11 +22,18 @@
 3. [Диаграмма последовательности](#3)<br>
 4. [Диаграмма состояний](#4)<br>
 4.1 [Добавить аудиофайлы в плейлист](#4.1)<br>
+4.2 [Солировать аудиозапись](#4.2)<br>
+4.3 [Заглушить аудиозапись](#4.3)<br>
 5. [Диаграмма классов](#5)<br>
 6. [Диаграмма развёртывания и компонентов](#6)<br><br>
 
 
 ### Глоссарий
+* Аудиофайл - файл, который находится у Вас на компьютере и который еще не добавлен в плейлист аудиоплеера, например файлы формата ".mp3", ".wav" и т.д.
+* Аудиозапись - аудиофайл, который Вы добавили в аудиоплеер и готовый к воспроизведению.
+* Солирование аудиозаписи - громкость всех остальных аудиозаписей становится равной 0.
+* Заглушение аудиозаписи - громкость данной аудиозаписи становится равной 0.
+* Панорамирование - виртуальное размещение аудиозаписи в пространстве (лево-центр-право).
 
 ### 1. Диаграмма прецедентов<a name="1"></a>
 ![Use Case](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/UseCaseDiagram.png?raw=true)
@@ -112,6 +119,10 @@
 ### 4. Диаграмма состояний<a name="4"></a>
 #### 4.1. Добавить аудиофайлы в плейлист<a name="4.1"></a>
 ![Add](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_add.png?raw=true)
+#### 4.2. Солировать аудиозапись<a name="4.2"></a>
+![Solo](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_solo.png?raw=true)
+#### 4.3. Заглушить аудиозапись<a name="4.3"></a>
+![Mute](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/StateMachineDiagram/StateMachineDiagram_mute.png?raw=true)
 
 ### 5. Диаграмма классов<a name="5"></a>
 ![Class Diagram](https://github.com/Studenich/Multiplay/blob/master/Docs/Diagrams/ClassDiagram.png?raw=true)
