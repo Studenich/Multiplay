@@ -50,12 +50,9 @@ public class MainWindowController {
 
 
         addButton.setOnAction(event -> {
-            System.out.println("Add button clicked!");
-
             List<File> files = fileChooser.showOpenMultipleDialog(mainStage);
-            files.forEach(file -> {
-                System.out.println(file);
 
+            files.forEach(file -> {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/sample/TrackWidget.fxml"));
                 try {
@@ -70,10 +67,9 @@ public class MainWindowController {
                 trackWidgetController.setMainWindow(this);
                 trackWidgetController.initPlayer(file);
                 trackWidgetController.setName(file);
+                trackWidgetController.setNumber(audioTracks.size());
                 audioTracks.add(trackWidgetController);
             });
-
-            System.out.println(audioTracks.size());
         });
 
         playButton.setOnAction(event -> {
@@ -101,5 +97,19 @@ public class MainWindowController {
 
     void setMainStage(Stage stage) {
         this.mainStage = stage;
+    }
+
+    void soloTrack(int number) {
+        if (!audioTracks.get(number).isSolo()) {
+            audioTracks.parallelStream().forEach(track -> {
+                track.mute();
+            });
+            audioTracks.get(number).unMute();
+        }
+        else {
+            audioTracks.parallelStream().forEach(track -> {
+                track.unMute();
+            });
+        }
     }
 }

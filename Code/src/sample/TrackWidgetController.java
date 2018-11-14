@@ -1,5 +1,6 @@
 package sample;
 
+import java.awt.*;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -8,13 +9,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.paint.Color;
 
 public class TrackWidgetController {
 
-    MainWindowController mainWindow;
-    MediaPlayer player;
+    private MainWindowController mainWindow;
+    private MediaPlayer player;
+    private int number;
+    private int isNotMuted = 1;
+    private int isNotSolo = 1;
 
     @FXML
     private ResourceBundle resources;
@@ -42,8 +49,37 @@ public class TrackWidgetController {
 
     @FXML
     void initialize() {
+        volumeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            player.setVolume(newValue.doubleValue()/100 * isNotMuted);
+        });
+
+        panSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            player.setBalance(newValue.doubleValue()/50 - 1);
+        });
+
         soloButton.setOnAction(event -> {
-            mainWindow.test();
+            mainWindow.soloTrack(number);
+            if (isNotSolo == 1) {
+                isNotSolo = 0;
+                soloButton.setStyle("-fx-background-color: #e8e03b");
+            }
+            else {
+                isNotSolo = 1;
+                soloButton.setStyle("-fx-background-color: #ebebeb");
+            }
+        });
+
+        muteButton.setOnAction(event -> {
+            if (isNotMuted == 1) {
+                player.setVolume(0);
+                isNotMuted = 0;
+                muteButton.setStyle("-fx-background-color: #f73838");
+            }
+            else {
+                player.setVolume(volumeSlider.getValue()/100);
+                isNotMuted = 1;
+                muteButton.setStyle("-fx-background-color: #ebebeb");
+            }
         });
     }
 
@@ -51,8 +87,13 @@ public class TrackWidgetController {
         this.mainWindow = mainWindow;
     }
 
+    void setNumber(int number) {
+        this.number = number;
+    }
+
     void initPlayer(File audioFile) {
         player = new MediaPlayer(new Media(audioFile.toURI().toString()));
+        player.setVolume(0.8);
     }
 
     void setName(File audioFile) {
@@ -73,6 +114,30 @@ public class TrackWidgetController {
         player.stop();
     }
 
+    void mute() {
+        if (isNotSolo == 0) {
+            isNotSolo = 1;
+            soloButton.setStyle("-fx-background-color: #ebebeb");
+        }
+        if (isNotMuted == 1) {
+            player.setVolume(0);
+            isNotMuted = 0;
+            muteButton.setStyle("-fx-background-color: #f73838");
+        }
+    }
+
+    void unMute() {
+        if (isNotMuted == 0) {
+            player.setVolume(volumeSlider.getValue()/100);
+            isNotMuted = 1;
+            muteButton.setStyle("-fx-background-color: #ebebeb");
+        }
+    }
+
+    boolean isSolo() {
+        if (isNotSolo == 0) return true;
+        else return false;
+    }
     void test() {
         System.out.println("Track Test");
     }
