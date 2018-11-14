@@ -31,7 +31,10 @@
 Проект использует фреймворк JavaFX.
 #### 2.2. Интерфейс пользователя <a name="2.2"></a>
 Графический интерфейс проекта представлен с помощью mockup'a главного окна:
+
 ![Mockup](https://github.com/Studenich/Multiplay/blob/master/Docs/Project%20Documentation/Mockup.png?raw=true)
+
+
 Рассмотрим элементы управления:
 
 Элемент управления | Реакция
