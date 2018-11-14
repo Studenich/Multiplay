@@ -23,6 +23,6 @@
             </HBox>
          </children>
       </AnchorPane>
-      <HBox fx:id="trackHBox" layoutX="15.0" layoutY="94.0" prefHeight="389.0" prefWidth="846.0" spacing="15.0" style="-fx-border-color: green;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0" />
+      <HBox fx:id="trackHBox" layoutX="15.0" layoutY="94.0" prefHeight="389.0" prefWidth="846.0" spacing="15.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0" />
    </children>
 </AnchorPane>

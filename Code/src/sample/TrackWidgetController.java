@@ -1,19 +1,13 @@
 package sample;
 
-import java.awt.*;
 import java.io.File;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.paint.Color;
+
 
 public class TrackWidgetController {
 
@@ -22,15 +16,6 @@ public class TrackWidgetController {
     private int number;
     private int isNotMuted = 1;
     private int isNotSolo = 1;
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    private AnchorPane trackPane;
 
     @FXML
     private Label trackNameLabel;
@@ -49,6 +34,7 @@ public class TrackWidgetController {
 
     @FXML
     void initialize() {
+
         volumeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             player.setVolume(newValue.doubleValue()/100 * isNotMuted);
         });
@@ -137,8 +123,5 @@ public class TrackWidgetController {
     boolean isSolo() {
         if (isNotSolo == 0) return true;
         else return false;
-    }
-    void test() {
-        System.out.println("Track Test");
     }
 }

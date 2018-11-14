@@ -2,10 +2,8 @@ package sample;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,13 +17,6 @@ public class MainWindowController {
     private FileChooser fileChooser;
     private Stage mainStage;
     private ArrayList<TrackWidgetController> audioTracks = new ArrayList<TrackWidgetController>();
-    private int count = 0;
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button addButton;
@@ -45,9 +36,6 @@ public class MainWindowController {
     @FXML
     void initialize() {
         fileChooser = new FileChooser();
-
-
-
 
         addButton.setOnAction(event -> {
             List<File> files = fileChooser.showOpenMultipleDialog(mainStage);
@@ -89,10 +77,6 @@ public class MainWindowController {
                 track.stop();
             });
         });
-    }
-
-    void test() {
-        System.out.println("Main Test");
     }
 
     void setMainStage(Stage stage) {
