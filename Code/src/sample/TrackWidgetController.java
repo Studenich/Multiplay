@@ -53,13 +53,24 @@ public class TrackWidgetController {
 
     void initPlayer(File audioFile) {
         player = new MediaPlayer(new Media(audioFile.toURI().toString()));
-        player.play();
     }
 
     void setName(File audioFile) {
         String name = audioFile.toString().substring(audioFile.toString().lastIndexOf('\\') + 1,
                                                      audioFile.toString().lastIndexOf('.'));
         trackNameLabel.setText(name);
+    }
+
+    void play() {
+        player.play();
+    }
+
+    void pause() {
+        player.pause();
+    }
+
+    void stop() {
+        player.stop();
     }
 
     void test() {

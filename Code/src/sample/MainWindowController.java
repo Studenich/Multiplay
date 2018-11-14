@@ -76,6 +76,23 @@ public class MainWindowController {
             System.out.println(audioTracks.size());
         });
 
+        playButton.setOnAction(event -> {
+            audioTracks.parallelStream().forEach(track -> {
+                track.play();
+            });
+        });
+
+        pauseButton.setOnAction(event -> {
+            audioTracks.parallelStream().forEach(track -> {
+                track.pause();
+            });
+        });
+
+        stopButton.setOnAction(event -> {
+            audioTracks.parallelStream().forEach(track -> {
+                track.stop();
+            });
+        });
     }
 
     void test() {
