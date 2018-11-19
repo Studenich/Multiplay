@@ -34,6 +34,8 @@ public class TrackWidgetController {
 
     @FXML
     void initialize() {
+        volumeSlider.getStylesheets().add("sample/Style.css");
+        volumeSlider.setId("mySlider");
 
         volumeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             player.setVolume(newValue.doubleValue()/100 * isNotMuted);

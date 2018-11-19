@@ -1,0 +1,7 @@
+
+#mySlider .thumb {
+    -fx-background-image: url("file:/D:/Универ/5%20семестр/ТРиТПО/Проект/Project/Code/src/resources/sliderThumb.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 74;
+    -fx-pref-width: 36;
+}
