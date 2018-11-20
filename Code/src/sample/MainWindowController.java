@@ -1,3 +1,4 @@
+
 package sample;
 
 import java.io.File;
@@ -12,27 +13,59 @@ import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+/**
+ * Класс контроллера главного окна.
+ * Содержит элементы управления главного окна, а также обработка их событий
+ */
 public class MainWindowController {
 
+    /**
+     * Окно добавления файлов.
+     */
     private FileChooser fileChooser;
+    /**
+     * Главная сцена приложения.
+     * Необходима для вызова окна добавления файлов.
+     */
     private Stage mainStage;
-    private ArrayList<TrackWidgetController> audioTracks = new ArrayList<TrackWidgetController>();
+    /**
+     * Список контроллеров всех аудиозаписей.
+     */
+    private final ArrayList<TrackWidgetController> audioTracks = new ArrayList<>();
 
+    /**
+     * Кнопка добавления файлов.
+     */
     @FXML
     private Button addButton;
 
+    /**
+     * Кнопка воспроизведения аудиозаписей.
+     */
     @FXML
     private Button playButton;
 
+    /**
+     * Кнопка паузы.
+     */
     @FXML
     private Button pauseButton;
 
+    /**
+     * Кнопка остановки воспроизведения.
+     */
     @FXML
     private Button stopButton;
 
+    /**
+     * Контейнер, в котором располагаются аудиотреки.
+     */
     @FXML
     private HBox trackHBox;
 
+    /**
+     * Инициализация класса.
+     */
     @FXML
     void initialize() {
         fileChooser = new FileChooser();
@@ -42,7 +75,7 @@ public class MainWindowController {
 
             files.forEach(file -> {
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/sample/TrackWidget.fxml"));
+                loader.setLocation(getClass().getResource("/sample/GUI/TrackWidget.fxml"));
                 try {
                     loader.load();
                 } catch (IOException e) {
@@ -79,18 +112,29 @@ public class MainWindowController {
         });
     }
 
-    void setMainStage(Stage stage) {
+    /**
+     * Инициализация главной сцены приложения.
+     * Параметр передается из класса Main.
+     *
+     * @param stage Главная сцена
+     */
+    void setMainStage(final Stage stage) {
         this.mainStage = stage;
     }
 
-    void soloTrack(int number) {
+    /**
+     * Метод солирования трека.
+     * Солирует выбранный трек, заглушает все остальные.
+     *
+     * @param number Номер выбранного трека
+     */
+    void soloTrack(final int number) {
         if (!audioTracks.get(number).isSolo()) {
             audioTracks.parallelStream().forEach(track -> {
                 track.mute();
             });
             audioTracks.get(number).unMute();
-        }
-        else {
+        } else {
             audioTracks.parallelStream().forEach(track -> {
                 track.unMute();
             });
