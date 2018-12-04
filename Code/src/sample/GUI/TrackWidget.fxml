@@ -7,16 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="trackPane" maxWidth="150.0" minWidth="150.0" prefHeight="400.0" prefWidth="150.0" style="-fx-border-color: silver; -fx-background-color: #2f2f2f; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TrackWidgetController">
+<AnchorPane fx:id="trackPane" maxWidth="135.0" minWidth="135.0" prefHeight="400.0" prefWidth="135.0" style="-fx-border-color: silver; -fx-background-color: #2f2f2f; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TrackWidgetController">
    <children>
       <Label fx:id="trackNameLabel" layoutX="14.0" layoutY="7.0" prefHeight="38.0" prefWidth="137.0" text="Name" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="soloButton" layoutX="17.0" layoutY="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Solo" />
-      <Button fx:id="muteButton" layoutX="83.0" layoutY="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Mute" />
-      <Slider fx:id="panSlider" layoutX="13.0" layoutY="120.0" majorTickUnit="50.0" minorTickCount="5" prefHeight="14.0" prefWidth="125.0" showTickMarks="true" value="50.0">
+      <Button fx:id="soloButton" layoutX="17.0" layoutY="50.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="S" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Button fx:id="muteButton" layoutX="73.0" layoutY="50.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text="M">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <Slider id="myPanSlider" fx:id="panSlider" layoutX="13.0" layoutY="103.0" majorTickUnit="50.0" minorTickCount="5" prefHeight="14.0" prefWidth="110.0" showTickMarks="true" stylesheets="@Styles.css" value="50.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -26,16 +32,26 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="71.0" layoutY="142.0" text="C" textFill="WHITE">
+      <Label layoutX="63.0" layoutY="142.0" text="C" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="129.0" layoutY="142.0" text="R" textFill="WHITE">
+      <Label layoutX="114.0" layoutY="142.0" text="R" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <Slider id="mySlider" fx:id="volumeSlider" layoutX="22.0" layoutY="173.0" majorTickUnit="20.0" orientation="VERTICAL" prefHeight="140.0" prefWidth="50.0" showTickLabels="true" showTickMarks="true" stylesheets="@Styles.css" value="80.0" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="170.0" />
+      <Label fx:id="volumeLabel" layoutX="70.0" layoutY="173.0" text="V: 80%" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="panLabel" layoutX="70.0" layoutY="203.0" text="P: 0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

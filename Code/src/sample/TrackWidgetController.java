@@ -74,19 +74,35 @@ public class TrackWidgetController {
     private Slider volumeSlider;
 
     /**
+     * Значение громкости аудиозаписи.
+     */
+    @FXML
+    private Label volumeLabel;
+
+    /**
+     * Значение панорамы аудиозаписи.
+     */
+    @FXML
+    private Label panLabel;
+
+    /**
      * Инициализация класса.
      */
     @FXML
     void initialize() {
         volumeSlider.getStylesheets().add("sample/GUI/Styles.css");
         volumeSlider.setId("mySlider");
+        panSlider.setId("myPanSlider");
 
         volumeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             player.setVolume(newValue.doubleValue() / 100 * isNotMuted);
+            volumeLabel.setText("V: " + (int) (player.getVolume() * 100) + "%");
+
         });
 
         panSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             player.setBalance(newValue.doubleValue() / 50 - 1);
+            panLabel.setText(String.format("P: %.2f",  player.getBalance()));
         });
 
         soloButton.setOnAction(event -> {

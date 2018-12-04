@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -58,10 +59,17 @@ public class MainWindowController {
     private Button stopButton;
 
     /**
+     * Скролл-пэйн, в котором располагаются аудиотреки.
+     */
+    @FXML
+    private ScrollPane trackScrollPane;
+
+    /**
      * Контейнер, в котором располагаются аудиотреки.
      */
     @FXML
     private HBox trackHBox;
+
 
     /**
      * Инициализация класса.
@@ -69,6 +77,7 @@ public class MainWindowController {
     @FXML
     void initialize() {
         fileChooser = new FileChooser();
+        trackScrollPane.setContent(trackHBox);
 
         addButton.setOnAction(event -> {
             List<File> files = fileChooser.showOpenMultipleDialog(mainStage);

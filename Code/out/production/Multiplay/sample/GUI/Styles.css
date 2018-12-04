@@ -1,7 +1,38 @@
 
 #mySlider .thumb {
-    -fx-background-image: url("file:/D:/Универ/5%20семестр/ТРиТПО/Проект/Project/Code/src/resources/sliderThumb.png");
+    -fx-background-image: url("/resources/sliderThumb.png");
     -fx-background-color: transparent;
     -fx-pref-height: 74;
     -fx-pref-width: 36;
+}
+
+#myPanSlider .thumb {
+    -fx-background-image: url("/resources/sliderThumbPan.png");
+    -fx-background-color: transparent;
+    -fx-pref-height: 40;
+    -fx-pref-width: 23;
+}
+
+#myAddButton {
+    -fx-background-image: url("/resources/addButton.png");
+    -fx-pref-height: 50;
+    -fx-pref-width: 50;
+}
+
+#myPlayButton {
+    -fx-background-image: url("/resources/playButton.png");
+    -fx-pref-height: 50;
+    -fx-pref-width: 50;
+}
+
+#myPauseButton {
+    -fx-background-image: url("/resources/pauseButton.png");
+    -fx-pref-height: 50;
+    -fx-pref-width: 50;
+}
+
+#myStopButton {
+    -fx-background-image: url("/resources/stopButton.png");
+    -fx-pref-height: 50;
+    -fx-pref-width: 50;
 }
