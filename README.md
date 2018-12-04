@@ -7,3 +7,5 @@ Multiplay is a desktop player designed for playing several audiofiles at the sam
 ### Diagrams: ([Ru](https://github.com/Studenich/Multiplay/tree/master/Docs/Diagrams)).
 ### Code: ([Ru](https://github.com/Studenich/Multiplay/tree/master/Code)).
 ### Testing: ([Ru](https://github.com/Studenich/Multiplay/tree/master/Docs/Testing))
+
+### Programm (.jar file): ([Download](https://drive.google.com/open?id=1KFONO0xPKSECnzyp_IHYkHOjP7mC60HM))
